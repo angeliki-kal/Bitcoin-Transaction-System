@@ -16,25 +16,28 @@ This program is implemented by a set of structures such as hash tables, linked l
 + bitCoinBalancesFile: is a file that contains the initial balances of the users participating in the bitcoin network. For example the contents of the file are:
 
 Mia 123 337 880 667
+
 Kylian 456 767 898
+
 Katerina 222 567 003
 
 which means that Mia has four bitcoins with bitCoinIDs 123, 337, 880, 667. Kylian has 3 bitcoins with IDs 456, 767, 898, and lastly, Katerina has 3 bitcoins with IDs 222, 567, 003.
 + transactionsFile: is a file that contains a number of requests (transactions) to be processed. Each line of this file describes a transaction with the sender's and receiver's userIDs and the amount (in $) sent by the sender. For example if the contents of the file are:
 
 889 Maria Ronaldo 50 25-12-2018 20:08
+
 776 Lionel Antonella 150 14-02-2019 10:05
 
 which means that we hae two transactions. One in which Maria asks to send 50$ to Ronaldo on 25-12-2018 8:08pm, and one that Lionel asks to send Antonella 150$ on 14-02-2019 10:05am.
 Specifically, a transaction record / request is an ASCII line of text consisting of
 following items:
 
-⋅⋅1. transactionID: a string (it can only have digits) that determines, in a unique way, each record.
-⋅⋅2. senderWalletID: a string consisting of letters.
-⋅⋅3. receiverWalletID: a string consisting of letters.
-⋅⋅4. value: the integer amount of the transaction.
-⋅⋅5. date: date the transaction request is made. Has this kind of format: DD-MM-YYYY.
-⋅⋅6. time: exact time, in the 24 hours, that the transaction request was made. Must be in this kind of format HH:MM.
+1. transactionID: a string (it can only have digits) that determines, in a unique way, each record.
+2. senderWalletID: a string consisting of letters.
+3. receiverWalletID: a string consisting of letters.
+4. value: the integer amount of the transaction.
+5. date: date the transaction request is made. Has this kind of format: DD-MM-YYYY.
+6. time: exact time, in the 24 hours, that the transaction request was made. Must be in this kind of format HH:MM.
 
 The program starts by reading line by line the input files and initialize and save to the memory the data structures it will use when executing the queries. Futhermor, a validation check of the input is made.
 When the application finishes processing the bitCoinBalancesFile and transactionsFile, it waits for user's input from the keyboard. The user is to give the following commands:
