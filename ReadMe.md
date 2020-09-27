@@ -10,18 +10,18 @@ This program is implemented by a set of structures such as hash tables, linked l
 + bucketSize: the amount of Bytes for every bucket of both hash tables.
 + bitCoinBalancesFile: is a file that contains the initial balances of the users participating in the bitcoin network. For example the contents of the file are:
 
-Mia 123 337 880 667
+                      Mia 123 337 880 667
 
-Kylian 456 767 898
+                      Kylian 456 767 898
 
-Katerina 222 567 003
+                      Katerina 222 567 003
 
 which means that Mia has four bitcoins with bitCoinIDs 123, 337, 880, 667. Kylian has 3 bitcoins with IDs 456, 767, 898, and lastly, Katerina has 3 bitcoins with IDs 222, 567, 003.
 + transactionsFile: is a file that contains a number of requests (transactions) to be processed. Each line of this file describes a transaction with the sender's and receiver's userIDs and the amount (in $) sent by the sender. For example if the contents of the file are:
 
-889 Maria Ronaldo 50 25-12-2018 20:08
+                      889 Maria Ronaldo 50 25-12-2018 20:08
 
-776 Lionel Antonella 150 14-02-2019 10:05
+                      776 Lionel Antonella 150 14-02-2019 10:05
 
 which means that we hae two transactions. One in which Maria asks to send 50$ to Ronaldo on 25-12-2018 8:08pm, and one that Lionel asks to send Antonella 150$ on 14-02-2019 10:05am.
 Specifically, a transaction record / request is an ASCII line of text consisting of
@@ -63,7 +63,7 @@ The application returns the original value of bitcoin with bitCoinID ID, the num
 The application returns the trading history in which bitcoin bitCoinID is involved.
 + /exit
 
-Exit the application. Release all the memory.
+Exit the application. Releases all the memory.
 
 ## An example of the Data Structure use:
 ![alt text](example-of-data-structures.png)
