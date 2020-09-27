@@ -4,8 +4,6 @@ This program is implemented by a set of structures such as hash tables, linked l
 
 ## Run
 ./bitcoin -a bitCoinBalancesFile –t transactionsFile -v bitCoinValue senderHashtableNumOfEntries –h2 receiverHashtableNumOfEntries –b bucketSize
-
-## Implementation
 + bitCoinValue: the value of a bitcoin in $.
 + senderHashtable1NumOfEntries: the available space of a hash table used in order to locate the sender's information.
 + receiverHashtable1NumOfEntries: the available space of a hash table used in order to locate the receiver's information.
