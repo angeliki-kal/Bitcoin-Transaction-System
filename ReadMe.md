@@ -5,9 +5,6 @@ This program is implemented by a set of structures such as hash tables, linked l
 ## Run
 ./bitcoin -a bitCoinBalancesFile –t transactionsFile -v bitCoinValue senderHashtableNumOfEntries –h2 receiverHashtableNumOfEntries –b bucketSize
 
-## An example of the Data Structure use:
-![alt text](example-of-data-structures.png)
-
 ## Implementation
 + bitCoinValue: the value of a bitcoin in $.
 + senderHashtable1NumOfEntries: the available space of a hash table used in order to locate the sender's information.
@@ -70,5 +67,6 @@ The application returns the trading history in which bitcoin bitCoinID is involv
 
 Exit the application. Release all the memory.
 
-
+## An example of the Data Structure use:
+![alt text](example-of-data-structures.png)
 
